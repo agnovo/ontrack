@@ -1,0 +1,22 @@
+<h1>近期博客</h1>
+
+
+<% @posts.each do |post| %>
+<div id="post">
+	<h2><%= link_to post.title , post %></h2>
+	
+	<%= simple_format post.content %>
+</div>
+
+ 
+    <%= post.title %>
+    <%= post.content %>
+
+    <%= link_to '编辑', edit_post_path(post) %>
+    <%= link_to '删除', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<% end %>
+
+<br />
+
+<%= link_to '新增博文', new_post_path %>

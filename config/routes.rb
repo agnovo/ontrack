@@ -1,4 +1,7 @@
 Ontrack::Application.routes.draw do
+  resources :posts
+
+
   resources :projects
 
 
